@@ -1,7 +1,7 @@
 {
   "name": "weather-cli",
   "version": "1.0.0",
-  "description": "A command-line interface application to retrieve weather data based on a specified location.",
+  "description": "A command-line interface application to retrieve weather data based on a specified location using the free Open-Meteo API.",
   "main": "bin/index.js",
   "bin": {
     "weather-cli": "bin/index.js"

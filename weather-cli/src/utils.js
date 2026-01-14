@@ -1,11 +1,14 @@
-export function formatWeatherData(data) {
-    if (!data || !data.weather || !data.main) {
+function formatWeatherData(data, units = 'metric') {
+    if (!data || !data.current || !data.location) {
         return 'Weather data is not available.';
     }
 
-    const { temp, humidity } = data.main;
-    const { description } = data.weather[0];
-    const location = data.name;
+    const { temp_c } = data.current;
+    const { name: location } = data.location;
 
-    return `Weather in ${location}:\n- Temperature: ${temp}°C\n- Humidity: ${humidity}%\n- Description: ${description.charAt(0).toUpperCase() + description.slice(1)}`;
+    const unitSymbol = units === 'imperial' ? '°F' : units === 'kelvin' ? 'K' : '°C';
+
+    return `Weather in ${location}:\n- Temperature: ${temp_c}${unitSymbol}\n- Description: Current weather data (humidity not available)`;
 }
+
+module.exports = { formatWeatherData };
