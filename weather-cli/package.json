@@ -1,0 +1,22 @@
+{
+  "name": "weather-cli",
+  "version": "1.0.0",
+  "description": "A command-line interface application to retrieve weather data based on a specified location.",
+  "main": "bin/index.js",
+  "bin": {
+    "weather-cli": "bin/index.js"
+  },
+  "scripts": {
+    "start": "node bin/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "keywords": [
+    "weather",
+    "cli",
+    "api"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
