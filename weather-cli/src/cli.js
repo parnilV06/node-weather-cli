@@ -49,3 +49,5 @@ Examples:
 }
 
 module.exports = { runCLI };
+
+runCLI();
