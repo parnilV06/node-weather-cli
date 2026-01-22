@@ -11,6 +11,9 @@ async function getWeather(location, units = 'metric') {
                 q: location,
                 format: 'json',
                 limit: 1
+            },
+            headers: {
+                'User-Agent': 'weather-cli/1.0.0'
             }
         });
 
@@ -27,6 +30,9 @@ async function getWeather(location, units = 'metric') {
                 longitude: lon,
                 current_weather: true,
                 temperature_unit: units === 'imperial' ? 'fahrenheit' : 'celsius'
+            },
+            headers: {
+                'User-Agent': 'weather-cli/1.0.0'
             }
         });
 
